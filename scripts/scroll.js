@@ -1,8 +1,11 @@
 const links = document.querySelectorAll(`.header-menu__item a`)
+const linksCharacteristic = document.querySelector(`.card-details__link-characteristics`)
+
+const array = [...links, linksCharacteristic]
 
 seamless.polyfill()
 
-links.forEach((element) => {
+array.forEach((element) => {
     element.addEventListener(`click`, () => {
         console.log(`click`)
     })
